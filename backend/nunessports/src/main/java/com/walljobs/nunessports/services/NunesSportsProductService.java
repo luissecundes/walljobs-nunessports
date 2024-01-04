@@ -15,13 +15,11 @@ public class NunesSportsProductService {
 	@Autowired
 	private NunesSportsProductRepository nunesSportsProductRepository;
 	
-	@Transactional
 	public List<NunesSportsProduct> findAll(){
 		var result = nunesSportsProductRepository.findAll();
 		return result;
 	}
 	
-	@Transactional(readOnly = true)
 	public NunesSportsProduct findById(Long id) {
 		NunesSportsProduct result = nunesSportsProductRepository.findById(id).get();
 		return result;
