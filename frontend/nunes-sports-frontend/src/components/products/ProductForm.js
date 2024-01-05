@@ -1,17 +1,15 @@
+import styles from './ProductForm.module.css'
+import Input from '../form/Input'
+import SubmitButton from '../form/SubmitButton'
 
 
-function Productform() {
+function Productform({btnText}) {
   return (
-    <form>
-      <div>
-        <input type="text" placeholder="Insira o nome do produto"></input>
-      </div>
-      <div>
-        <input type="text" placeholder="Insira a descrição do produto"></input>
-      </div>
-      <div>
-        <input type="number" placeholder="Insira o preço do produto"></input>
-      </div>
+    <form className={styles.form}>      
+      <Input type="text" text="Nome do Produto" placeholder="Insira o nome do produto"/>
+      <Input type="text" text="Descrição do Produto" placeholder="Insira a descrição do produto"/>
+      <Input type="number" text="Preço do Produto" placeholder="Insira o preço do produto"/>
+      <SubmitButton text={btnText}/>
     </form>
   )
 }
