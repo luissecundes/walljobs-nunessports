@@ -1,0 +1,17 @@
+/* Product.module.css */
+
+.ProductsTable {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 20px;
+}
+
+.ProductsTable th, .ProductsTable td {
+  border: 1px solid #ddd;
+  padding: 10px;
+  text-align: left;
+}
+
+.ProductsTable th {
+  background-color: #f2f2f2;
+}

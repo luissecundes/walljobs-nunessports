@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from 'react';
+import styles from './Product.module.css'
 
 function Products() {
   const [productList, setProductList] = useState([]);
@@ -20,15 +21,26 @@ function Products() {
   }, []); // O segundo parâmetro [] assegura que o useEffect só será chamado na montagem inicial
 
   return (
-    <div>
-      <h1>Produtos</h1>
-      <ul>
-        {productList.map((product) => (
-          <li key={product.id}>
-            <strong>{product.name}</strong> - {product.description} - R${product.price.toFixed(2)}
-          </li>
-        ))}
-      </ul>
+    <div className={styles.Products}>
+      <h1 className={styles.ProductsTitle}>Produtos</h1>
+      <table className={styles.ProductsTable}>
+        <thead>
+          <tr>
+            <th>Nome do Produto</th>
+            <th>Descrição do Produto</th>
+            <th>Preço do Produto</th>
+          </tr>
+        </thead>
+        <tbody>
+          {productList.map((product) => (
+            <tr key={product.id} className={styles.ProductItem}>
+              <td className={styles.ProductName}>{product.name}</td>
+              <td className={styles.ProductDescription}>{product.description}</td>
+              <td>R${product.price.toFixed(2)}</td>
+            </tr>
+          ))}
+        </tbody>
+      </table>
     </div>
   );
 }
