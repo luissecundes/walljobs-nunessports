@@ -1,24 +1,26 @@
-import React, { useState, useEffect } from 'react';
-import axios from 'axios';
+import React from 'react';
+import './index.css';
+import { BrowserRouter as Router, Routes, Route, Link } from 'react-router-dom'
+import Home from './components/pages/Home'
+import Company from './components/pages/Company'
+import Products from './components/pages/Products'
+import Container from './components/layouts/Container'
 
 function App() {
-  const [products, setProducts] = useState([]);
-
-  useEffect(() => {
-    axios.get('http://localhost:8080/products')
-      .then(response => setProducts(response.data))
-      .catch(error => console.error('Erro ao obter produtos:', error));
-  }, []);
-
   return (
-    <div>
-      <h1>Lista de Produtos</h1>
-      <ul>
-        {products.map(product => (
-          <li key={product.id}>{product.name}</li>
-        ))}
-      </ul>
-    </div>
+    <Router>
+      <div>
+        <Link to="/">Home</Link>
+        <Link to="/products">Produtos</Link>
+        <Link to="/company">Sobre nós</Link>
+      </div>
+      <Routes>
+        <Route path="/" element={<Container customClass="min-height"><Home /> </Container>} />
+        <Route path="/products" element={<Container> <Products /></Container>} />
+        <Route path="/company" element={<Container> <Company /></Container>} />
+      </Routes>
+      <p>Footer</p>
+    </Router>
   );
 }
 
