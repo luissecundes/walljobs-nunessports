@@ -1,0 +1,25 @@
+.CompanyContainer {
+  max-width: 98%;
+  margin-left: 25px; 
+  margin-right: 25px; 
+  text-align: center;
+}
+
+.CompanyTitle {
+  text-align: center;
+  color: #333; 
+  margin-top: 10px;
+}
+.CompanyTitle span{
+  
+  color: #fef7e1;
+  padding: 0 .2em;
+  background-color: #222;
+  border-radius: 20px;
+}
+
+.CompanyText {
+  text-align: justify;
+  margin: 0 10px;
+  color: #666; 
+}

@@ -1,6 +1,6 @@
 import { useNavigate } from 'react-router-dom';
 import styles from './AddProducts.module.css';
-import ProductForm from '../products/ProductForm';
+import ProductForm from '../forms/ProductForm';
 
 function AddProducts() {
   const navigate = useNavigate();

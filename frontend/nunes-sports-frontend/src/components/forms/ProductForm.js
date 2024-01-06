@@ -1,7 +1,7 @@
 import { useState } from "react";
 import styles from "./ProductForm.module.css";
-import Input from "../form/Input";
-import SubmitButton from "../form/SubmitButton";
+import Input from "./Input";
+import SubmitButton from "../buttons/SubmitButton";
 
 function ProductForm({ handleSubmit, btnText, productData }) {
   const [product, setProduct] = useState(productData || {});

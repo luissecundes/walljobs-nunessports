@@ -1,7 +1,7 @@
 import { useState, useEffect } from "react";
 import styles from "./ProductEditForm.module.css";
-import Input from "../form/Input";
-import SubmitButton from "../form/SubmitButton";
+import Input from "./Input";
+import SubmitButton from "../buttons/SubmitButton";
 
 function ProductEditForm({ handleSubmit, btnText, productId }) {
   const [product, setProduct] = useState({

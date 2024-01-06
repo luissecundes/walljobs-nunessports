@@ -2,7 +2,7 @@
 import { useState, useEffect } from 'react';
 import { useNavigate, useParams } from 'react-router-dom';
 import styles from './EditProducts.module.css';
-import ProductEditForm from '../products/ProductEditForm';
+import ProductEditForm from '../forms/ProductEditForm';
 
 function EditProducts() {
   const navigate = useNavigate();

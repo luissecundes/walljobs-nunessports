@@ -1,4 +1,3 @@
-// ProductTable.jsx
 import React from 'react';
 import styles from './ProductTable.module.css';
 import DeleteButton from '../buttons/DeleteButton';
