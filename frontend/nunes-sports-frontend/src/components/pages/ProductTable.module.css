@@ -4,28 +4,31 @@
   margin-top: 20px;
   margin-left: 5em;
   box-shadow: 2px 2px 2px 2px #222;
-  border-collapse:separate;
-  -webkit-border-radius: 25px;
-     -moz-border-radius: 25px;
-          border-radius: 25px;
-          
+  border-top: 3px solid #222;
 }
 
+.ProductId {
+  text-align: right;
+  border-right: 1px solid #d4d3d3; 
+}
 
 .ProductsTable th, .ProductsTable td {
   padding: 10px;
-  text-align: left;
-  
+  text-align: center;
+  border-bottom: 1px solid #d4d3d3; 
+  border-right: 1px solid #d4d3d3; 
 }
 
 .ProductsTable th {
-   background-color: #222;
+  background-color: #222;
   padding: 20px;
+  border-right: 1px solid #ddd; 
 }
+
 .ProductsTable tbody {
   border-radius: 10px;
   background-color: #f9f8f3;
-} 
+}
 
 .ProductsTable button {
   color: #222;
@@ -39,19 +42,7 @@
   margin-right: 5px;
 }
 
-table {
-  border-collapse: collapse;
-  border-radius: 1em;
-  overflow: hidden;
-  border-top: 3px solid #222;
-  border-spacing: 0px;
-}
-
-th, td {
-  padding: 1em;
-  border-bottom: 2px ; 
-}
-
-.titles{
+.titles {
   color: #fef7e1;
+  text-align: left;
 }

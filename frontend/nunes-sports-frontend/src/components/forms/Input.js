@@ -9,7 +9,7 @@ function Input({ type, text, name, placeholder, handleOnChange, value, error }) 
     <div className={`${styles.form_control} ${showError ? styles.error : ''}`}>
       <label htmlFor={name}>{text}:</label>
       <div className={`${styles.input_container} ${isPriceField ? styles.priceInput : ''}`}>
-        {isPriceField && <span className={styles.currencySymbol}>R$</span>}
+        {isPriceField && <span className={styles.currencySymbol}><strong>R$</strong></span>}
         <input
           type={type}
           name={name}

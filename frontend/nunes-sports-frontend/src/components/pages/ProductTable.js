@@ -8,6 +8,7 @@ function ProductTable({ productList, onDelete, onEdit }) {
     <table className={styles.ProductsTable}>
       <thead>
         <tr className={styles.titles}>
+          <th>Cód.</th>
           <th>Nome do Produto</th>
           <th>Descrição do Produto</th>
           <th>Valor</th>
@@ -17,6 +18,7 @@ function ProductTable({ productList, onDelete, onEdit }) {
       <tbody>
         {productList.map((product) => (
           <tr key={product.id} className={styles.ProductItem}>
+            <td className={styles.ProductId}>{product.id || 'N/A'}</td>
             <td className={styles.ProductName}>{product.name}</td>
             <td className={styles.ProductDescription}>{product.description}</td>
             <td>R${product.price.toFixed(2)}</td>
