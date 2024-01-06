@@ -1,10 +1,9 @@
-
-
 .navbar {
   justify-content: space-between;
   background-color: #222;
   padding: 0em;
   width: 100%;
+  height: 18%;
 }
 
 .list{
@@ -15,14 +14,21 @@
 }
 
 .item {
-  margin-right: 1em;
+  margin-right: 2em;
+  font-weight: bold; 
+
 
 }
 
 .item a{
-  color: #FFF;
+  color:#fef7e1;
   text-decoration: none;
 }
 .item a:hover{
-  color: #FFBB33;
+  color: #e2aa87;
+}
+
+.logo {
+  margin-left: 2em;
+  margin-top: 1em;
 }
