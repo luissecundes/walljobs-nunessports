@@ -1,16 +1,23 @@
+import React, { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 import styles from './AddProducts.module.css';
 import ProductForm from '../forms/ProductForm';
+import LoadingSpinner from './LoadingSpinner'; 
 
 function AddProducts() {
   const navigate = useNavigate();
-
+  const [loading, setLoading] = useState(false); 
   const handleProductSubmit = async (product) => {
     try {
+      setLoading(true); 
+
       const response = await createProduct(product);
       console.log(response);
-      navigate('/products');    } catch (error) {
+      navigate('/products');
+    } catch (error) {
       console.error(error);
+    } finally {
+      setLoading(false); 
     }
   };
 
@@ -43,7 +50,11 @@ function AddProducts() {
     <div className={styles.addproducts_container}>
       <h1>Adicionar Produto</h1>
       <p>Preencha os dados para adicionar o produto</p>
-      <ProductForm handleSubmit={handleProductSubmit} btnText="Adicionar Produto" />
+      {loading ? (
+        <LoadingSpinner />
+      ) : (
+        <ProductForm handleSubmit={handleProductSubmit} btnText="Adicionar Produto" />
+      )}
     </div>
   );
 }

@@ -1,20 +1,25 @@
-// EditProducts.jsx
-import { useState, useEffect } from 'react';
+import React, { useState } from 'react';
 import { useNavigate, useParams } from 'react-router-dom';
 import styles from './EditProducts.module.css';
 import ProductEditForm from '../forms/ProductEditForm';
+import LoadingSpinner from './LoadingSpinner';
 
 function EditProducts() {
   const navigate = useNavigate();
   const { productId } = useParams();
+  const [loading, setLoading] = useState(false); 
 
   const handleEditSubmit = async (product) => {
     try {
+      setLoading(true); 
+
       const response = await updateProduct(productId, product);
       console.log(response);
-      navigate('/products'); 
+      navigate('/products');
     } catch (error) {
       console.error(error);
+    } finally {
+      setLoading(false); 
     }
   };
 
@@ -40,7 +45,11 @@ function EditProducts() {
   return (
     <div className={styles.editproducts_container}>
       <h1>Editar Produto</h1>
-      <ProductEditForm handleSubmit={handleEditSubmit} btnText="Salvar Edição" productId={productId} />
+      {loading ? (
+        <LoadingSpinner />
+      ) : (
+        <ProductEditForm handleSubmit={handleEditSubmit} btnText="Salvar Edição" productId={productId} />
+      )}
     </div>
   );
 }

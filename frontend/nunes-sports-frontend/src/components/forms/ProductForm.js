@@ -5,14 +5,38 @@ import SubmitButton from "../buttons/SubmitButton";
 
 function ProductForm({ handleSubmit, btnText, productData }) {
   const [product, setProduct] = useState(productData || {});
+  const [errors, setErrors] = useState({});
+
+  const validateForm = () => {
+    const newErrors = {};
+
+    if (!product.name) {
+      newErrors.name = "O nome é obrigatório.";
+    }
+
+    if (!product.description) {
+      newErrors.description = "A descrição é obrigatória.";
+    }
+
+    if (!product.price) {
+      newErrors.price = "O preço é obrigatório.";
+    }
+
+    setErrors(newErrors);
+    return Object.keys(newErrors).length === 0;
+  };
 
   const submit = (e) => {
     e.preventDefault();
-    handleSubmit(product);
+
+    if (validateForm()) {
+      handleSubmit(product);
+    }
   };
 
   const handleChange = (e) => {
     setProduct({ ...product, [e.target.name]: e.target.value });
+    setErrors({ ...errors, [e.target.name]: undefined });
   };
 
   return (
@@ -24,6 +48,7 @@ function ProductForm({ handleSubmit, btnText, productData }) {
         handleOnChange={handleChange}
         value={product.name || ""}
         name="name"
+        error={errors.name}
       />
       <Input
         type="text"
@@ -32,6 +57,7 @@ function ProductForm({ handleSubmit, btnText, productData }) {
         handleOnChange={handleChange}
         value={product.description || ""}
         name="description"
+        error={errors.description}
       />
       <Input
         type="number"
@@ -40,6 +66,7 @@ function ProductForm({ handleSubmit, btnText, productData }) {
         handleOnChange={handleChange}
         value={product.price || ""}
         name="price"
+        error={errors.price}
       />
       <SubmitButton text={btnText} />
     </form>
