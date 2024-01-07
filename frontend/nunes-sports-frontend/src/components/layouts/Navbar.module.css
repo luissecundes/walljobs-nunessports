@@ -1,5 +1,5 @@
 .navbar {
-  background-color: #333;
+  background-color: #3b3b3b;
   padding: 10px 0;
 }
 
@@ -36,12 +36,12 @@
 }
 
 .item a {
-  color: #fef7e1;
+  color: #f0f0f0;
   text-decoration: none;
 }
 
 .item a:hover {
-  color: #e2aa87;
+  color: #f2c603;
 }
 
 @media screen and (max-width: 768px) {

@@ -20,14 +20,14 @@
 }
 
 .ProductsTable th {
-  background-color: #222;
+  background-color: #3b3b3b;
   padding: 20px;
-  border-right: 1px solid #ddd; 
+  border-right: 1px solid #f0f0f0; 
 }
 
 .ProductsTable tbody {
   border-radius: 10px;
-  background-color: #f9f8f3;
+  background-color: #f0f0f0;
 }
 
 .ProductsTable button {
@@ -43,6 +43,6 @@
 }
 
 .titles {
-  color: #fef7e1;
+  color: #f0f0f0;
   text-align: left;
 }
