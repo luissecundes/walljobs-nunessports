@@ -45,7 +45,7 @@ O projeto é dividido em camadas, seguindo as boas práticas de desenvolvimento:
 ## Como Executar
 1. Clone o repositório.
 2. Configure o ambiente de desenvolvimento para Java 17 e ReactJS v6 ou superior.
-3. Execute o backend através da IDE Spring Tool Suite (ambiente onde foi desenvolvido), Eclipe ou alguma outra de sua preferência.
+3. Execute o backend através da IDE Spring Tool Suite (ambiente onde foi desenvolvido), Eclipse ou alguma outra de sua preferência.
 4. Execute o frontend usando o VS Code (ambiente onde foi desenvolvido) ou outra IDE de sua preferência. 
   - *Não se esqueça de executar o comando 'npm install' dentro da raiz do frontend para adicionar as bibliotecas corretas em suas devidas versões.*
 
