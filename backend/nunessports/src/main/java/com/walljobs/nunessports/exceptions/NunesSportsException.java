@@ -17,7 +17,7 @@ public class NunesSportsException extends RuntimeException {
 	public static class ProductsNotFoundIdException extends NunesSportsException {
 		private static final long serialVersionUID = 1L;
 
-		public ProductsNotFoundIdException() {
+		public ProductsNotFoundIdException(long l) {
 			super("Não foi possível encontrar a lista de produtos.");
 		}
 	}
