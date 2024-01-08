@@ -7,6 +7,7 @@ O projeto WallJobs é um teste prático desenvolvido para a empresa fictícia Nu
 - Java
 - Spring Boot (Spring Web e Spring Data JPA)
 - H2 Database
+- JUnit & Mockito
 - Javascript
 - ReactJS (React Router, React Icons, React, Material Icons, React Hooks, React Loader e Modal)
 
