@@ -1,3 +1,4 @@
+import { Link } from 'react-router-dom'
 import styles from './Home.module.css'
 import savings from '../../img/savings.png'
 import LinkButton from '../layouts/LinkButton';
@@ -8,7 +9,7 @@ function Home() {
       <h1>Bem-vindo à <span>Nunes Sports</span></h1>
       <p>Gerencie aqui os seus produtos!</p>
       <LinkButton to="/addproducts" text="Adicionar Produto" />
-      <img src={savings} alt='Nunes Sports'></img>
+      <Link to="/addproducts"><img src={savings} alt='Nunes Sports'></img></Link>
     </section>
   );
 }

@@ -19,7 +19,6 @@ function App() {
         <Route path="/company" element={<Container customClass="min-height"> <Company /></Container>} />
         <Route path="/addproducts" element={<Container customClass="min-height"> <AddProducts /></Container>} />
         <Route path="/producteditform/:productId" element={<Container customClass="min-height"> <EditProducts /></Container>} />
-
       </Routes>
       <Footer />
     </Router>
