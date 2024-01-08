@@ -12,10 +12,21 @@ O projeto WallJobs é um teste prático desenvolvido para a empresa fictícia Nu
 
 # Layout e Design
 
+## Imagem do backend que precisa ser ativado antes
+
 ![Imagem do backend que precisa ser ativado antes](./frontend/screenshots/print1.png)
+
+## Página Home
+
 ![Página Home](./frontend/screenshots/print2.png)
+
+## Página com a lista de produtos
+
 ![Página com a lista de produtos](./frontend/screenshots/print3.png)
-![Imagem do backend que precisa ser ativado antes](./frontend/screenshots/print4.png)
+
+## Imagem da página com a história da Companhia
+
+![Imagem da página com a história da Companhia](./frontend/screenshots/print4.png)
 
 ## Estrutura do Projeto
 O projeto é dividido em camadas, seguindo as boas práticas de desenvolvimento:
