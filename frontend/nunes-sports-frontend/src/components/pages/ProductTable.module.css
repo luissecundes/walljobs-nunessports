@@ -1,10 +1,14 @@
+.titles {
+  color: #f0f0f0;
+  text-align: left;
+
+}
+
 .ProductsTable {
   width: 100%;
   border-collapse: collapse;
-  margin-top: 20px;
+  margin-top: 2%;
   margin-left: 5em;
-  box-shadow: 2px 2px 2px 2px #222;
-  border-top: 3px solid #222;
 }
 
 .ProductId {
@@ -12,26 +16,36 @@
   border-right: 1px solid #d4d3d3; 
 }
 
-.ProductsTable th, .ProductsTable td {
-  padding: 10px;
-  text-align: center;
-  border-bottom: 1px solid #d4d3d3; 
-  border-right: 1px solid #d4d3d3; 
-}
-
 .ProductsTable th {
   background-color: #3b3b3b;
   padding: 20px;
+  text-align: center;
   border-right: 1px solid #f0f0f0; 
+  border-bottom: 1px solid #d4d3d3; 
 }
 
+.ProductsTable td {
+  padding: 10px;
+  text-align: center;
+}
+
+
 .ProductsTable tbody {
-  border-radius: 10px;
+  border-radius: 5%;
   background-color: #f0f0f0;
+}
+
+.ProductsTable tbody tr:nth-child(even) {
+  background-color: #e6e6e6; 
+}
+
+.ProductsTable tbody tr:hover {
+  background-color: #ffbb33; 
 }
 
 .ProductsTable button {
   color: #222;
+  background-color: transparent;
   border: none;
   padding: 5px 10px;
   text-align: center;
@@ -40,9 +54,15 @@
   font-size: 14px;
   cursor: pointer;
   margin-right: 5px;
+  outline: none;
+  transition: background-color 0.3s; 
 }
 
-.titles {
-  color: #f0f0f0;
-  text-align: left;
+.ProductsTable button:hover {
+  background-color: #fcfcfc; 
 }
+
+.ProductsTable button:active {
+  background-color: #fcfcfc; 
+}
+
