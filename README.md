@@ -46,7 +46,8 @@ O projeto é dividido em camadas, seguindo as boas práticas de desenvolvimento:
 1. Clone o repositório.
 2. Configure o ambiente de desenvolvimento para Java 17 e ReactJS v6 ou superior.
 3. Execute o backend através da IDE Spring Tool Suite (ambiente onde foi desenvolvido), Eclipse ou alguma outra de sua preferência.
-4. Execute o frontend usando o VS Code (ambiente onde foi desenvolvido) ou outra IDE de sua preferência. 
+   - Caso queira fazer uma verificação na base de dados do H2, lembre-se de acessar o localhost:8080/h2-console e inserir os dados de login conforme está no arquivo application.properties. Por via das dúvidas deixei o username e password que vem preenchido por padrão no H2 que são: Username: sa, Password: (nulo, apenas um campo em branco).
+5. Execute o frontend usando o VS Code (ambiente onde foi desenvolvido) ou outra IDE de sua preferência. 
   - *Não se esqueça de executar o comando 'npm install' dentro da raiz do frontend para adicionar as bibliotecas corretas em suas devidas versões.*
 
     - npm install
