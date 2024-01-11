@@ -1,0 +1,29 @@
+# Dockerfile-backend
+
+# Use a imagem oficial do OpenJDK como base
+FROM eclipse-temurin:17-jdk-alpine
+
+# Defina o diretório de trabalho dentro do contêiner
+WORKDIR /app
+
+# Copie apenas os arquivos necessários para garantir uma construção eficiente
+COPY .mvn .mvn
+COPY .settings .settings
+COPY src src
+COPY target target
+COPY .classpath .
+COPY .gitignore .
+COPY .project .
+COPY create.sql .
+COPY mvnw .
+COPY mvnw.cmd .
+COPY pom.xml .
+
+# Compile o projeto
+RUN chmod +x .mvn/wrapper/maven-wrapper.jar
+
+# Exponha a porta em que a aplicação Spring Boot está em execução
+EXPOSE 8080
+
+# Comando para iniciar a aplicação Spring Boot
+CMD ["java", "-jar", "target/nunessports.jar"]

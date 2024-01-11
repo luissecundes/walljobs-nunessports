@@ -1,0 +1,28 @@
+# Dockerfile-frontend
+
+# Use uma imagem oficial do Node.js como base
+FROM node:14-alpine
+
+# Defina o diretório de trabalho dentro do contêiner
+WORKDIR /app
+
+# Copie apenas os arquivos necessários para garantir uma construção eficiente
+COPY node_modules node_modules
+COPY public public
+COPY src src
+COPY .gitignore .
+COPY package.json .
+COPY package-lock.json .
+COPY README.md .
+
+# Instale as dependências
+RUN npm install
+
+# Construa o aplicativo ReactJS
+RUN npm run build
+
+# Exponha a porta em que o servidor de desenvolvimento do ReactJS está em execução
+EXPOSE 3000
+
+# Comando para iniciar o aplicativo ReactJS
+CMD ["npm", "start"]
