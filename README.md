@@ -61,7 +61,7 @@ O projeto é dividido em camadas, seguindo as boas práticas de desenvolvimento:
 
 ## Comando para buscar imagem no Docker Hub
 
-Caso haja alguma complicação de versões, pode ser usado o comando 'docker pull luissecundes/nunessports-backend:1.0' para puxar a imagem que foi criada na minha máquina pessoal para desenvolver o projeto
+Caso haja alguma complicação de versões, pode ser usado o comando 'docker pull luissecundes/nunessports-backend:latest' para puxar a imagem que foi criada na minha máquina pessoal para desenvolver o projeto
 
 ## Contribuições
 
